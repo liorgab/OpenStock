@@ -121,3 +121,10 @@ nslookup -type=TXT cluster0.xywdgo2.mongodb.net 8.8.8.8
    (חשוד עיקרי: ה-glider של ה-TabBar, שמחושב ב-`offsetLeft`/`translateX`)
 3. להחליט לגבי `npm audit fix`
 4. לתרגם את `app/(marketing)/` אם רוצים כיסוי מלא
+
+---
+
+## קשר ל-stock-desk
+
+השוואה מלאה בין שני הפרויקטים, כולל מה כדאי לשאול לכל כיוון:
+`C:\claude\stock-desk\docsesearch\openstock-comparison.md` (נכתב 2026-10-09).
