@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Atlas onboarding credentials (values already live in .env)
+atlas-credentials.env

@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans, IBM_Plex_Mono } from "next/font/google";
+import { Heebo, IBM_Plex_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import {Toaster} from "@/components/ui/sonner";
 import OntoLaunchCard from "@/components/OntoLaunchCard";
 import "./globals.css";
 
-const jakarta = Plus_Jakarta_Sans({
-  variable: "--font-jakarta",
-  subsets: ["latin"],
+// Heebo carries Hebrew glyphs; Plus Jakarta Sans did not.
+const heebo = Heebo({
+  variable: "--font-heebo",
+  subsets: ["hebrew", "latin"],
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 const plexMono = IBM_Plex_Mono({
@@ -18,7 +20,7 @@ const plexMono = IBM_Plex_Mono({
 
 export const metadata: Metadata = {
   title: "OpenStock",
-  description: "OpenStock is an open-source alternative to expensive market platforms. Track real-time prices, set personalized alerts, and explore detailed company insights — built openly, for everyone, forever free.",
+  description: "OpenStock — פלטפורמת מעקב מניות בקוד פתוח. מחירים בזמן אמת, התראות אישיות ומידע מעמיק על חברות. חינם, לתמיד.",
 };
 
 export default function RootLayout({
@@ -27,9 +29,9 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en" className="dark">
+        <html lang="he" dir="rtl" className="dark">
             <body
-                className={`${jakarta.variable} ${plexMono.variable} font-sans antialiased`}
+                className={`${heebo.variable} ${plexMono.variable} font-sans antialiased`}
             >
                 {children}
                 <Toaster/>

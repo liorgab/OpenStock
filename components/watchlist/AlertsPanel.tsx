@@ -48,7 +48,7 @@ export default function AlertsPanel({ alerts }: { alerts: AlertRow[] }) {
         return (
             <div className="empty-state py-10">
                 <span className="empty-icon"><BellRing className="size-5" /></span>
-                <h3>Alerts come with Cloud</h3>
+                <h3>התראות זמינות ב-Cloud</h3>
                 <p className="max-w-64 text-[13px]">Email price alerts are part of OpenStock Cloud, $5 a month and coming soon.</p>
                 <Link href="/#data" className="btn btn-ghost mt-2">See OpenStock Cloud</Link>
             </div>
@@ -59,7 +59,7 @@ export default function AlertsPanel({ alerts }: { alerts: AlertRow[] }) {
         return (
             <div className="empty-state py-10">
                 <span className="empty-icon"><BellRing className="size-5" /></span>
-                <h3>No alerts yet</h3>
+                <h3>אין עדיין התראות</h3>
                 <p className="max-w-60 text-[13px]">Use the bell on any row, or “Set alert” on a stock page. We email you when it fires.</p>
             </div>
         );

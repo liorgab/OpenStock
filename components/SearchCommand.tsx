@@ -80,7 +80,7 @@ export default function SearchCommand({ initialStocks }: { initialStocks: StockW
             </div>
             <CommandList className="search-list">
                 {loading ? (
-                    <CommandEmpty className="search-list-empty">Searching</CommandEmpty>
+                    <CommandEmpty className="search-list-empty">מחפש…</CommandEmpty>
                 ) : displayStocks?.length === 0 ? (
                     <div className="search-list-indicator">
                         {isSearchMode ? `Nothing matches “${searchTerm.trim()}”` : 'No stocks available'}

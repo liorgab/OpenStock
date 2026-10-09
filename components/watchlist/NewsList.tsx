@@ -6,8 +6,8 @@ export default function NewsList({ news }: { news: MarketNewsArticle[] }) {
         return (
             <div className="empty-state">
                 <span className="empty-icon"><Newspaper className="size-5" /></span>
-                <h3>No recent news</h3>
-                <p>Nothing published in the last few days for these symbols.</p>
+                <h3>אין חדשות אחרונות</h3>
+                <p>לא פורסם דבר בימים האחרונים על הסימבולים האלה.</p>
             </div>
         );
     }

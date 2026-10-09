@@ -32,8 +32,8 @@ export default function WatchlistTable({ initialRows }: { initialRows: Row[] }) 
         return (
             <div className="empty-state">
                 <span className="empty-icon"><Star className="size-5" /></span>
-                <h3>Nothing on your watchlist yet</h3>
-                <p className="max-w-sm">Search for a company and star it to track its price here and set alerts.</p>
+                <h3>רשימת המעקב שלכם ריקה</h3>
+                <p className="max-w-sm">חפשו חברה וסמנו אותה בכוכב כדי לעקוב אחרי המחיר ולהגדיר התראות.</p>
                 <SearchButton className="btn btn-primary mt-3"><Search /> Search stocks</SearchButton>
                 <div className="mt-4 flex flex-wrap justify-center gap-1.5">
                     {SUGGESTIONS.map((s) => (
@@ -49,12 +49,12 @@ export default function WatchlistTable({ initialRows }: { initialRows: Row[] }) 
             <table className="data-table">
                 <thead>
                     <tr>
-                        <th>Company</th>
-                        <th className="is-num">Price</th>
-                        <th className="is-num">Today</th>
-                        <th className="is-num">Change</th>
-                        <th className="is-num">Market cap</th>
-                        <th className="w-[88px]"><span className="sr-only">Actions</span></th>
+                        <th>חברה</th>
+                        <th className="is-num">מחיר</th>
+                        <th className="is-num">היום</th>
+                        <th className="is-num">שינוי</th>
+                        <th className="is-num">שווי שוק</th>
+                        <th className="w-[88px]"><span className="sr-only">פעולות</span></th>
                     </tr>
                 </thead>
                 <tbody>

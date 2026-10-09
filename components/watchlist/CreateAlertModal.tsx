@@ -61,7 +61,7 @@ export default function CreateAlertModal({ symbol, currentPrice, currency = 'USD
                 {alertsEnabled ? (
                     <>
                         <div>
-                            <p className="kicker text-brand-ink">Price alert</p>
+                            <p className="kicker text-brand-ink">התראת מחיר</p>
                             <DialogTitle className="mt-1 text-xl font-bold tracking-tight mono">{symbol}</DialogTitle>
                             <DialogDescription className="mt-1 text-[13px] text-faint">
                                 We email you when the price crosses your target. Checked every 5 minutes, expires after 90 days.
@@ -88,7 +88,7 @@ export default function CreateAlertModal({ symbol, currentPrice, currency = 'USD
                             </div>
 
                             <label className="flex flex-col gap-2">
-                                <span className="form-label">Target price</span>
+                                <span className="form-label">מחיר יעד</span>
                                 <span className="flex h-12 items-center gap-2 rounded-[11px] border border-line bg-page px-3 focus-within:border-brand">
                                     <span className="mono text-faint">{currency}</span>
                                     <input
@@ -121,7 +121,7 @@ export default function CreateAlertModal({ symbol, currentPrice, currency = 'USD
                     // Alerts are an OpenStock Cloud feature; the free hourly site points people to it
                     <div>
                         <p className="kicker text-brand-ink">OpenStock Cloud</p>
-                        <DialogTitle className="mt-1 text-xl font-bold tracking-tight">Price alerts come with Cloud</DialogTitle>
+                        <DialogTitle className="mt-1 text-xl font-bold tracking-tight">התראות מחיר זמינות ב-Cloud</DialogTitle>
                         <DialogDescription className="mt-2 text-[13.5px] leading-relaxed text-muted-foreground">
                             Cloud adds email price alerts and live quotes for $5 a month. It’s coming soon. Self-hosting includes both today.
                         </DialogDescription>

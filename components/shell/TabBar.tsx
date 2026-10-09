@@ -12,9 +12,9 @@ const STORAGE_KEY = 'openstock-tabs';
 const MAX_TABS = 12;
 
 const PAGE_LABELS: Record<string, string> = {
-    '/dashboard': 'Overview',
-    '/watchlist': 'Watchlist',
-    '/profile': 'Profile',
+    '/dashboard': 'סקירה',
+    '/watchlist': 'רשימת מעקב',
+    '/profile': 'פרופיל',
 };
 
 // Pages become browser-style tabs; stock pages are labelled by their symbol.
@@ -70,11 +70,11 @@ const TabBar = ({ onMenu }: { onMenu: () => void }) => {
 
     return (
         <div className="tabbar">
-            <button type="button" onClick={onMenu} className="chrome-btn lg:hidden" aria-label="Open menu">
+            <button type="button" onClick={onMenu} className="chrome-btn lg:hidden" aria-label="פתיחת תפריט">
                 <Menu />
             </button>
 
-            <div className="tabs pl-3 pr-3">
+            <div className="tabs ps-3 pe-3">
                 <div
                     className={cn('tab-glider', glider && 'is-ready')}
                     style={glider ? { transform: `translateX(${glider.x}px)`, width: glider.w } : undefined}
@@ -93,7 +93,7 @@ const TabBar = ({ onMenu }: { onMenu: () => void }) => {
                         <div
                             key={path}
                             ref={(el) => { if (el) tabRefs.current.set(path, el); else tabRefs.current.delete(path); }}
-                            className={cn('tab', active && 'is-active', pinned && 'pr-4')}
+                            className={cn('tab', active && 'is-active', pinned && 'pe-4')}
                         >
                             {/* Stretched link: the whole tab navigates, while the close button stays a real, focusable button */}
                             <Link href={path} aria-current={active ? 'page' : undefined} className="flex min-w-0 flex-1 items-center gap-2 before:absolute before:inset-0 before:content-['']">
@@ -104,7 +104,7 @@ const TabBar = ({ onMenu }: { onMenu: () => void }) => {
                             {!pinned && (
                                 <button
                                     type="button"
-                                    aria-label={`Close ${tabLabel(path)}`}
+                                    aria-label={`סגירת ${tabLabel(path)}`}
                                     className="tab-close relative z-10"
                                     onClick={() => closeTab(path)}
                                 >
@@ -116,7 +116,7 @@ const TabBar = ({ onMenu }: { onMenu: () => void }) => {
                 })}
             </div>
 
-            <button type="button" onClick={openSearch} className="chrome-btn -ml-2" aria-label="Open a stock" title="Open a stock (⌘K)">
+            <button type="button" onClick={openSearch} className="chrome-btn -ms-2" aria-label="פתיחת מניה" title="פתיחת מניה (⌘K)">
                 <Plus />
             </button>
         </div>

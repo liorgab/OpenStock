@@ -30,39 +30,39 @@ const ForgotPasswordPage = () => {
             const result = await requestPasswordResetEmail(data);
 
             if (result.success) {
-                toast.success('If an account exists for that email, a reset link has been sent.');
+                toast.success('אם קיים חשבון עם האימייל הזה, נשלח אליו קישור לאיפוס.');
                 return;
             }
 
-            toast.error('Password reset unavailable', {
-                description: result.error ?? 'Unable to start password reset.',
+            toast.error('איפוס הסיסמה לא זמין', {
+                description: result.error ?? 'לא ניתן להתחיל איפוס סיסמה.',
             });
         } catch (error) {
-            toast.error('Password reset unavailable', {
-                description: error instanceof Error ? error.message : 'Unable to start password reset.',
+            toast.error('איפוס הסיסמה לא זמין', {
+                description: error instanceof Error ? error.message : 'לא ניתן להתחיל איפוס סיסמה.',
             });
         }
     };
 
     return (
         <>
-            <h1 className="form-title">Forgot your password?</h1>
+            <h1 className="form-title">שכחתם סיסמה?</h1>
             <p className="text-sm text-gray-400 mb-6">
-                Enter your email address and we&apos;ll send you a password reset link.
+                הזינו את כתובת האימייל ונשלח לכם קישור לאיפוס הסיסמה.
             </p>
 
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
                 <InputField
                     name="email"
-                    label="Email"
+                    label="אימייל"
                     placeholder="opendevsociety@cc.cc"
                     register={register}
                     error={errors.email}
                     validation={{
-                        required: 'Email is required',
+                        required: 'חובה להזין אימייל',
                         pattern: {
                             value: /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/,
-                            message: 'Please enter a valid email address',
+                            message: 'כתובת אימייל לא תקינה',
                         },
                     }}
                 />
