@@ -19,6 +19,8 @@ npm run build     # בילד לפרודקשן (אומת 2026-10-09)
 npm run lint
 ```
 
+**אל תריץ `npm run build` בזמן ש-`npm run dev` רץ.** שניהם כותבים ל-`.next`, וה-dev נשאר במצב שבור שמחזיר 500 בכל עמוד. אם זה קרה: לעצור את ה-dev, למחוק את `.next`, ולהריץ dev מחדש.
+
 **שים לב:** זה npm, לא pnpm — למרות מה שכתוב ב-README. בריפו יש רק `package-lock.json`.
 
 ## Git
@@ -127,4 +129,5 @@ nslookup -type=TXT cluster0.xywdgo2.mongodb.net 8.8.8.8
 ## קשר ל-stock-desk
 
 השוואה מלאה בין שני הפרויקטים, כולל מה כדאי לשאול לכל כיוון:
-`C:\claude\stock-desk\docsesearch\openstock-comparison.md` (נכתב 2026-10-09).
+`C:\claude\stock-desk\docs
+esearch\openstock-comparison.md` (נכתב 2026-10-09).
