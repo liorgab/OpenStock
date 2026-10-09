@@ -15,7 +15,7 @@
 ```bash
 npm run dev       # http://localhost:3000
 npm run test:db   # בדיקת חיבור ל-MongoDB
-npm run build     # בילד לפרודקשן (עדיין לא נבדק!)
+npm run build     # בילד לפרודקשן (אומת 2026-10-09)
 npm run lint
 ```
 
@@ -98,7 +98,7 @@ nslookup -type=TXT cluster0.xywdgo2.mongodb.net 8.8.8.8
 2. **`NEXT_PUBLIC_FINNHUB_API_KEY` נשלח לדפדפן.** התחילית `NEXT_PUBLIC_` ב-Next.js
    אורזת את הערך לתוך קוד הלקוח. ב-localhost זה בסדר. **אל תעלה לרשת עם המפתח הזה.**
 
-3. **`npm run build` מעולם לא הורץ.** רק `dev`. ייתכנו שגיאות טיפוסים שרק הבילד יתפוס.
+3. ~~`npm run build` מעולם לא הורץ~~ — הורץ ועבר ב-2026-10-09. תפס באג אחד (גרש במילה "פיצ'ר" סגר מחרוזת עם גרש בודד) שתוקן. **כלל:** מחרוזת עברית שמכילה גרש חייבת מרכאות כפולות.
 
 4. **עדכונים עתידיים יתנגשו.** `git pull` ידרוש מיזוג ידני מול שינויי התרגום.
 
@@ -108,7 +108,7 @@ nslookup -type=TXT cluster0.xywdgo2.mongodb.net 8.8.8.8
 
 ## הצעדים הבאים המומלצים
 
-1. `npm run build` — לוודא שהתרגום לא שבר טיפוסים
+1. ~~`npm run build`~~ — בוצע, עובר.
 2. לעבור על המסכים בדפדפן ולתפוס בעיות RTL שהחלפת המחלקות לא כיסתה
    (חשוד עיקרי: ה-glider של ה-TabBar, שמחושב ב-`offsetLeft`/`translateX`)
 3. להחליט לגבי `npm audit fix`

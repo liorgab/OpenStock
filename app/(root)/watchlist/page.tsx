@@ -63,7 +63,7 @@ export default async function WatchlistPage() {
                     </Panel>
                 </div>
 
-                <Panel title="התראות" sub={alertsEnabled ? `${activeAlerts} פעילות · נבדקות כל 5 דקות` : 'פיצ'ר של OpenStock Cloud'} className="self-start">
+                <Panel title="התראות" sub={alertsEnabled ? `${activeAlerts} פעילות · נבדקות כל 5 דקות` : "פיצ'ר של OpenStock Cloud"} className="self-start">
                     <AlertsPanel alerts={alerts} />
                 </Panel>
             </div>
