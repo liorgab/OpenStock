@@ -21,6 +21,14 @@ npm run lint
 
 **שים לב:** זה npm, לא pnpm — למרות מה שכתוב ב-README. בריפו יש רק `package-lock.json`.
 
+## Git
+
+- **origin** = `liorgab/OpenStock` (fork ציבורי שלך). לכאן דוחפים.
+- **upstream** = `Open-Dev-Society/OpenStock` (המקור). רק למשיכת עדכונים. אין הרשאת כתיבה.
+- **ענף העבודה: `hebrew-rtl`** — כל התרגום כאן. `main` נשאר נקי ועוקב אחרי upstream.
+- למשוך עדכונים מהמקור: `git checkout main && git pull upstream main`, ואז `git checkout hebrew-rtl && git merge main` (צפויים קונפליקטים בקבצים המתורגמים).
+- `atlas-credentials.env` נמחק. הערכים ב-`.env`.
+
 ## מה כבר עובד
 
 - ✅ חיבור ל-MongoDB Atlas
